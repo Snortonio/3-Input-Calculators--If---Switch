@@ -1,0 +1,51 @@
+<html>
+    <body>
+        <form>
+            <input type="number" id="num1" />Input 1
+            <input type="number" id="num2"  />Input 2
+            <input type="text" id="op" />Operation
+            <br />
+            <input type="button" value="Solve" onClick="calc(this)">
+        </form>
+
+        <p id="result">
+        </p>
+    <script>
+
+        function calc(form){;
+        
+        var A = document.getElementById("num1").value;
+        var B = document.getElementById("num2").value;
+        var C = document.getElementById("op").value;
+        var D = "";
+
+        switch(C) {
+      case '+':
+      D = parseInt(A) + parseInt(B);
+      document.getElementById("result").innerHTML = D;
+      break;
+
+      case '-':
+      D = A - B;
+      document.getElementById("result").innerHTML = D;
+      break;
+
+      case '*':
+      D = A * B;
+      document.getElementById("result").innerHTML = D;
+      break;
+
+      case '/':
+      D = A / B;
+      document.getElementById("result").innerHTML = D;
+      break;
+
+      default:
+      document.getElementById("result").innerHTML = "Invalid Operator";
+      break;
+    }
+}
+        </script>
+
+    </body>
+</html>
